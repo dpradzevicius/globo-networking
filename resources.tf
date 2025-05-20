@@ -17,7 +17,7 @@ provider "azurerm" {
 ##################################################################################
 locals {
   common_tags = {
-    
+
   }
 }
 
@@ -49,9 +49,9 @@ module "avm-res-network-virtualnetwork" {
   name                = var.prefix
   resource_group_name = "learning02"
   subnets = {
-  for name, cidr in var.public_subnets : name => {
-    name             = "${var.prefix}-${name}"
-    address_prefixes = [cidr]
+    for name, cidr in var.public_subnets : name => {
+      name             = "${var.prefix}-${name}"
+      address_prefixes = [cidr]
+    }
   }
-}
 }

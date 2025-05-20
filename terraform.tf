@@ -22,7 +22,7 @@ terraform {
       source = "hashicorp/random"
     }
     azapi = {
-      source  = "azure/azapi"
+      source = "azure/azapi"
     }
     modtm = {
       source = "azure/modtm"
