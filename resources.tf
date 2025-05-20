@@ -17,7 +17,8 @@ provider "azurerm" {
 ##################################################################################
 locals {
   common_tags = {
-
+    Environment = var.environment
+    BillingCode = var.billing_code
   }
 }
 
